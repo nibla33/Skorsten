@@ -91,7 +91,7 @@ We are currently focused on **Phase 1: PLC Runtime MVP** — building the founda
 
 For detailed goals, specifications, and progress updates, see the dedicated phase document:
 
-[Phase 1: PLC Runtime MVP](./docs/PHASE-1.md)
+[Phase 1: PLC Runtime MVP](./docs/phases/PHASE-1.md)
 
 ---
 
