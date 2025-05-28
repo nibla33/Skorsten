@@ -82,6 +82,17 @@ While the early focus is on simple hardware, edge devices, and embedded Linux, t
 
 The development plan is split into components and chronological phases. View the full [roadmap here](./ROADMAP.md).
 
+
+---
+
+## 🚧 Current Phase
+
+We are currently focused on **Phase 1: PLC Runtime MVP** — building the foundational `.sk` language parser and basic runtime in Rust.
+
+For detailed goals, specifications, and progress updates, see the dedicated phase document:
+
+[Phase 1: PLC Runtime MVP](./docs/PHASE-1.md)
+
 ---
 
 ## 📖 Linked Docs
