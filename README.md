@@ -1,100 +1,101 @@
-# Skorsten — Modern, Open PLC Runtime & Text-based HMI
+# Skorsten — Open Source PLC Runtime & Text-Based HMI for a New Era
 
-**Status:** Early MVP — actively in development
-
----
-
-## Vision
-
-Skorsten is a minimalist, modular, open-source PLC runtime and HMI platform designed for mechatronics engineers and hardware hackers who want:
-
-- Full control over their automation code with plaintext, Git-friendly files
-- A modern, Linux-native toolchain free from vendor lock-in
-- Developer-first experience with AI, automation, and testing in mind
-- A text-based HMI interface designed for terminal and lightweight devices
-
-Our mission is to transform industrial automation tooling by bringing it into the 21st century.
+**Status:** Pre-MVP — Groundwork phase
+**Author:** Albin Magnusson
+**License:** MIT
 
 ---
 
-## Why Skorsten?
+## 🌍 Vision
 
-Existing PLC solutions are often:
+**Skorsten** is a modular, open-source automation platform that rethinks how PLC systems and HMI interfaces are designed and developed.
 
-- Closed and proprietary, locking you into expensive ecosystems
-- Windows-only and not friendly to modern development workflows
-- Difficult to version control and collaborate on
-- Poorly suited to automation, AI-assisted development, or embedded Linux
+It consists of two tightly related but technically distinct components:
 
-Skorsten aims to fix these issues by being:
+1. **Skorsten Runtime** – A Linux-native PLC runtime written in Rust, using a custom plaintext control language (`.sk`)
+2. **Skorsten HMI** – A lightweight, text-declarative HMI layer, inspired by HTML/CSS but built specifically for automation
 
-- Open and modular, with a plugin-friendly architecture
-- Text-based with all files in plaintext, perfect for Git and CI/CD
-- Lightweight and Linux-first, optimized for SBCs and edge devices
-- Focused on developer productivity and future-proof automation
+Together, they offer a minimal, extensible, and fully transparent foundation for modern industrial control — focused on Linux, real-time behavior, and developer-first workflows.
 
 ---
 
-## Roadmap
+## ✨ Core Principles
 
-### Phase 1: Foundation (Initial MVP)
-- Build a minimal runtime capable of parsing variables and executing a basic loop
-- Implement a simple text-based HMI that displays live variable states in the terminal
-- Create a CLI tool to run `.sk` programs on Linux
-- Develop minimal example `.sk` programs and documentation
-- Target: Initial MVP ready within a few months, progress depending on available time
-
-### Phase 2: IO & Simulation (Ongoing Development)
-- Add support for real and simulated IO drivers (e.g., GPIO, mock signals)
-- Improve the HMI with configurable layouts using a simple DSL or YAML
-- Introduce a unit testing framework for `.sk` logic
-- Publish example projects demonstrating hardware integration
-- Timeline: Rolling improvements as time permits, community contributions encouraged
-
-### Phase 3: Extensions & Community Building
-- Extend the language with control flow constructs (`IF`, `WHILE`, functions)
-- Add support for user-defined types and OOP-like features in `.sk`
-- Create thorough documentation, tutorials, and contributor guides
-- Foster a growing community via GitHub, forums, or chat platforms
-- Timeline: Iterative growth alongside user feedback and contributions
-
-### Phase 4: Release & Monetization (Long Term Vision)
-- Provide prebuilt Linux packages and easy installer scripts
-- Establish an official website and expand social media presence
-- Explore revenue models: support contracts, premium features, hardware bundles
-- Develop a browser-based HMI and remote monitoring capabilities
-- Timeline: Longer term goals, dependent on project traction and resources
+* 📄 **Plaintext by Default** — No binary formats or hidden logic; everything version-controllable
+* 🪶 **Modular and Minimal** — Base install is tiny; every feature is opt-in via plugins or modules
+* 🧰 **Hackable & Transparent** — No lock-in, no secrets, fully inspectable
+* 💻 **Linux-First** — Designed from the start for edge devices and embedded Linux
+* 🌱 **Sustainable and Extensible** — Plugins and modules can be community-made or commercial
+* 🧠 **Built for Developers** — Testing, simulation, AI tooling, and structured collaboration are priorities
 
 ---
 
-## Getting Started
+## 🤔 Why Skorsten?
 
-1. Clone the repo
-2. Write `.sk` programs in plaintext Structured Text dialect
-3. Run programs using the CLI runtime (`cargo run -- program.sk`)
-4. Watch your variable states update in the terminal-based HMI
+The industrial automation world is filled with legacy systems:
 
----
+* Closed, monolithic software stacks
+* Windows-only vendor tools
+* Poor support for modern dev workflows
+* Expensive, non-portable HMI systems
 
-## How to Contribute
-
-Contributions are welcome! Please open issues or pull requests for:
-
-- Bug fixes
-- Feature suggestions
-- Documentation improvements
-- Example projects
+Skorsten is your clean break from all that.
 
 ---
 
-## License
+## 🧱 Project Scope
 
-MIT License — 
+### 🔧 Skorsten Runtime (PLC Core)
+
+* `.sk` files define automation logic in an extended structured text dialect
+* Rust-based runtime on Linux executes control loops
+* Targeted at small form-factor PCs and SBCs like the Raspberry Pi
+
+### 🗅 Skorsten HMI
+
+* HMI definitions written in plaintext using a declarative syntax
+* Rendered as a live UI in a terminal or minimal GUI backend
+* Meant for embedded use, browser rendering optional later
+
+> The HMI and PLC are designed to function independently but integrate tightly.
 
 ---
 
-## Contact
+## 🚧 Roadmap
 
-Albin Magnusson — creator of Skorsten  
-Email: albin.magnu@gmail.com  
+The development plan is split into components and chronological phases. View the full [roadmap here](./ROADMAP.md).
 
+---
+
+## 📖 Linked Docs
+
+* [ROADMAP.md](./ROADMAP.md) — Full project development roadmap
+* [docs/SK-LANGUAGE.md](./docs/SK-LANGUAGE.md) — `.sk` language design and syntax
+* [docs/HMI-SPEC.md](./docs/HMI-SPEC.md) — Text-based HMI specification
+
+---
+
+## 🧰 Contributing
+
+Skorsten is currently in its groundwork phase and **not yet open for contributions**. Once the foundations are stable, guidelines and issues will be posted.
+
+---
+
+## 🛠 Tech Stack
+
+* **Runtime Language:** Rust
+* **Target Platform:** Linux (RT kernel optional)
+* **Logic Format:** `.sk` (structured text dialect)
+* **HMI Format:** `.hmi` (plaintext markup, WIP)
+
+---
+
+## 📨 Contact
+
+**Albin Magnusson** – Creator of Skorsten
+📧 Email: [albin.magnu@gmail.com](mailto:albin.magnu@gmail.com)
+🖥 GitHub: [github.com/YOURUSERNAME](https://github.com/YOURUSERNAME)
+
+---
+
+> *“Skorsten is a rejection of industrial software bloat — it's a toolbox for engineers who want control, clarity, and creativity in automation.”*
